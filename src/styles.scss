@@ -1,1 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+
+
+// VARIABLES
+
+$main-color: RED;
+
+
+// GENERAL CLASSES
+* {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: "Roboto", sans-serif;
+  }
+
+
+
+
+
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
