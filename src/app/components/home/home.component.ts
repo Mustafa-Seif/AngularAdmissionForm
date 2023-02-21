@@ -42,8 +42,6 @@ export class HomeComponent {
       Swal.fire('Success!', 'Your form have been sent!', 'success');
       // SHOW FORM DATA IN CONSOLE
       console.log(this.admissionForm);
-      // CLEAR INPUTS AFTER SUBMIT 
-      this.handleClear()
     }
   }
   handleClear() {
