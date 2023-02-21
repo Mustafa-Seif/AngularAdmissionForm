@@ -20,7 +20,7 @@
     }
     .buttons{
       .fill{
-         margin:0 ;
+         margin: 1rem 0 ;
       }
     }
   }
@@ -30,11 +30,12 @@
   }
   .mat-mdc-form-field {
     // width: 100%;
-    background: none !important;
+    // background: none !important;
   }
   h1 {
     position: relative;
     font-size: 4rem;
+    line-height:3rem;
     color: #fff;
     .animate-img {
       animation: rotating 2s linear infinite;
@@ -121,4 +122,16 @@
 .file-input__label svg {
   height: 16px;
   margin-right: 4px;
+}
+
+
+
+// H E D I A   Q U E R Y //
+@media only screen and (max-width: 600px) {
+    .img-home{
+       margin-bottom: 5rem;
+    }
+    .animate-img {
+      left: 4rem !important;
+    }
 }
