@@ -1,0 +1,23 @@
+footer{
+    ul{
+        text-align: end;
+
+        li{
+            display: inline;
+            margin:  0 0 0 1rem;
+            a{
+                transition: 200ms;
+                -webkit-transition: 200ms;
+                -moz-transition: 200ms;
+                -ms-transition: 200ms;
+                -o-transition: 200ms;
+                color: #fff;
+                font-size: 2rem;
+                &:hover{
+
+                color: #ED2924;
+                }
+            }
+        }
+    }
+}
