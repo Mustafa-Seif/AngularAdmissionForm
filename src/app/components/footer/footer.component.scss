@@ -1,23 +1,35 @@
-footer{
-    ul{
-        text-align: end;
-
-        li{
-            display: inline;
-            margin:  0 0 0 1rem;
-            a{
-                transition: 200ms;
-                -webkit-transition: 200ms;
-                -moz-transition: 200ms;
-                -ms-transition: 200ms;
-                -o-transition: 200ms;
-                color: #fff;
-                font-size: 2rem;
-                &:hover{
-
-                color: #ED2924;
-                }
-            }
+footer {
+  ul {
+    li {
+      display: inline;
+      margin: 0 0 0 1rem;
+      a {
+        transition: 200ms;
+        -webkit-transition: 200ms;
+        -moz-transition: 200ms;
+        -ms-transition: 200ms;
+        -o-transition: 200ms;
+        color: #fff;
+        font-size: 2rem;
+        &:hover {
+          color: #ed2924;
         }
+      }
     }
+  }
+}
+
+// H E D I A   Q U E R Y //
+@media only screen and (max-width: 600px) {
+  footer {
+    ul {
+      text-align: center !important;
+      li {
+        margin: 0 1rem;
+      }
+    }
+    .Rights {
+      text-align: center !important;
+    }
+  }
 }

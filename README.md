@@ -1,5 +1,13 @@
 # AdmissionForm
 
+this app  has been developed with..
+1- Anguler
+2- Anguler Material
+3- Anguler Bootstrap
+4- PWA
+5- Anguler Reactive Form 
+5- Sweetalert2 library
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.3.
 
 ## Development server
