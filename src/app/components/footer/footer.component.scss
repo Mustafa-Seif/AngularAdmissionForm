@@ -1,5 +1,6 @@
 footer {
   ul {
+    text-align: end;
     li {
       display: inline;
       margin: 0 0 0 1rem;
@@ -27,9 +28,6 @@ footer {
       li {
         margin: 0 1rem;
       }
-    }
-    .Rights {
-      text-align: center !important;
     }
   }
 }
