@@ -8,6 +8,11 @@ this app  has been developed with..
 5- Anguler Reactive Form 
 5- Sweetalert2 library
 
+
+## demo live
+`https://admission-form-fapqb825d-mustafa-seif.vercel.app/`
+
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.3.
 
 ## Development server
