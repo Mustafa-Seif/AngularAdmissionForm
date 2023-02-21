@@ -21,14 +21,18 @@ export class HomeComponent {
       Validators.maxLength(14),
       Validators.minLength(11),
     ]),
-    department: new FormControl('', Validators.required),
-    date: new FormControl('', Validators.required),
-    textarea: new FormControl('', [
+    salery: new FormControl('', [
       Validators.required,
-      Validators.maxLength(200),
-      Validators.minLength(20),
+  
+    ]),
+    address: new FormControl('', [
+      Validators.required,
+      Validators.maxLength(35),
+      Validators.minLength(5),
       Validators.pattern(/[A-Za-z0-9]/),
     ]),
+    department: new FormControl('', Validators.required),
+    date: new FormControl('', Validators.required),
   });
 
   // HANDLE SUBMIT
@@ -38,6 +42,8 @@ export class HomeComponent {
       Swal.fire('Success!', 'Your form have been sent!', 'success');
       // SHOW FORM DATA IN CONSOLE
       console.log(this.admissionForm);
+      // CLEAR INPUTS AFTER SUBMIT 
+      this.handleClear()
     }
   }
   handleClear() {

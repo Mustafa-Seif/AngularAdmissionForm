@@ -1,8 +1,8 @@
 .home-wrapper {
   margin-bottom: 5rem;
-  form{
-    fieldset{
-      legend{
+  form {
+    fieldset {
+      legend {
         color: #fff;
         font-weight: 700;
         font-size: 3rem;
@@ -12,10 +12,15 @@
         font-size: 32px;
         line-height: 1em;
         font-weight: bold;
-        border-left: 4px inset  currentColor;
+        border-left: 4px inset currentColor;
         padding-left: 1rem;
-        border-bottom: 4px outset   #ffffff62;
-        padding-bottom: .5rem;
+        border-bottom: 4px outset #ffffff62;
+        padding-bottom: 0.5rem;
+      }
+    }
+    .buttons{
+      .fill{
+         margin:0 ;
       }
     }
   }
@@ -24,9 +29,8 @@
     height: 22rem;
   }
   .mat-mdc-form-field {
-    width: 100%;
+    // width: 100%;
     background: none !important;
-
   }
   h1 {
     position: relative;
@@ -35,13 +39,13 @@
     .animate-img {
       animation: rotating 2s linear infinite;
       top: 0;
-      left: 4rem;
+      left: 5rem;
       position: absolute;
       width: 80px;
       height: auto;
     }
   }
-  .fill{
+  .fill {
     position: relative;
     //display:block;
     background-color: #fff;
@@ -56,32 +60,32 @@
     border-radius: 4px;
     text-transform: uppercase;
     outline: 0;
-    overflow:hidden;
+    overflow: hidden;
     z-index: 1;
     cursor: pointer;
-    transition:         0.08s ease-in;
-    -o-transition:      0.08s ease-in;
-    -ms-transition:     0.08s ease-in;
-    -moz-transition:    0.08s ease-in;
+    transition: 0.08s ease-in;
+    -o-transition: 0.08s ease-in;
+    -ms-transition: 0.08s ease-in;
+    -moz-transition: 0.08s ease-in;
     -webkit-transition: 0.08s ease-in;
     &:hover {
-        color: #fff;
-        border: #fff 1px solid;
-      }
-      &:before {
-        content: "";
-        position: absolute;
-        background: rgb(107, 15, 21);
-        bottom: 0;
-        left: 0;
-        right: 0;
-        top: 100%;
-        z-index: -1;
-        -webkit-transition: top 0.09s ease-in;
-      }
-      &:hover:before {
-        top: 0;
-      }
+      color: #fff;
+      border: #fff 1px solid;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      background: rgb(107, 15, 21);
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 100%;
+      z-index: -1;
+      -webkit-transition: top 0.09s ease-in;
+    }
+    &:hover:before {
+      top: 0;
+    }
   }
 }
 // animate-img Animation infinite rotate
@@ -93,17 +97,28 @@
     -webkit-transform: rotate(360deg);
   }
 }
-
-
-
-input{
+.file-input__input {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
 }
-
-
-  
-  
-  
- 
-  
-  
-  
+.file-input__label {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  font-size: 14px;
+  padding: 10px 12px;
+  background-color: #ed2924;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25);
+}
+.file-input__label svg {
+  height: 16px;
+  margin-right: 4px;
+}
