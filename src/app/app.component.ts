@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'admissionForm';
+  isLoader:boolean=true;
+  ngOnInit(){
+    // LOADER 
+    addEventListener('load',()=>{
+      setTimeout(()=>{this.isLoader = false},2000)
+    })
+  }
 }

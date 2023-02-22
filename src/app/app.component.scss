@@ -1,0 +1,15 @@
+.custom-laoder{
+    background-image: url('../assets/images/bg-loader.webp');
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    div{
+        text-align: center;
+        width: 50%;
+        margin: 15% auto;
+        // border: solid 1px #ccc;
+    }
+}

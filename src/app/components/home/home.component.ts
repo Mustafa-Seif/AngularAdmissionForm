@@ -7,6 +7,7 @@ import Swal from 'sweetalert2';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
+  ngOnInit(){}
   //  REACTIVE FORM AND VALIDION
   admissionForm: FormGroup = new FormGroup({
     name: new FormControl('', [
