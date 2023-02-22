@@ -78,13 +78,13 @@
           </mat-error>
         </mat-form-field>
         <mat-form-field appearance="fill" class="col-md-6 col-12">
-          <mat-label>Department</mat-label>
-          <mat-select formControlName="department">
-            <mat-option value="one">IT</mat-option>
-            <mat-option value="two">Markting</mat-option>
-            <mat-option value="two">Sales</mat-option>
+          <mat-label>Position</mat-label>
+          <mat-select formControlName="position">
+            <mat-option value="one">Front End</mat-option>
+            <mat-option value="two">Back End</mat-option>
+            <mat-option value="two">Full Stack</mat-option>
           </mat-select>
-          <mat-error *ngIf="admissionForm.controls['department'].hasError('required')">
+          <mat-error *ngIf="admissionForm.controls['position'].hasError('required')">
             Department is required
           </mat-error>
         </mat-form-field>
@@ -92,7 +92,13 @@
           <mat-label>$ Expected Salery</mat-label>
           <input matInput name="salery" type="number" formControlName="salery" />
           <mat-error *ngIf="admissionForm.controls['salery'].hasError('required')">
-            Phone is required
+            Salery is required
+          </mat-error>
+          <mat-error *ngIf="admissionForm.controls['salery'].hasError('maxlength')">
+            Max number is 6
+          </mat-error>
+          <mat-error *ngIf="admissionForm.controls['salery'].hasError('minlength')">
+            Min number is 3
           </mat-error>
         </mat-form-field>
         <mat-form-field appearance="fill" class="col-md-6 col-12">
@@ -128,7 +134,7 @@
                 d="M296 384h-80c-13.3 0-24-10.7-24-24V192h-87.7c-17.8 0-26.7-21.5-14.1-34.1L242.3 5.7c7.5-7.5 19.8-7.5 27.3 0l152.2 152.2c12.6 12.6 3.7 34.1-14.1 34.1H320v168c0 13.3-10.7 24-24 24zm216-8v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h136v8c0 30.9 25.1 56 56 56h80c30.9 0 56-25.1 56-56v-8h136c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z"
               ></path>
             </svg>
-            <span>Upload file</span></label
+            <span>Upload CV</span></label
           >
         </div>
         <div class="d-flex justify-content-between buttons">
@@ -148,3 +154,13 @@
     </div>
   </div>
 </main>
+<!-- <form #f="ngForm" [formGroup]="phoneForm">
+  <ngx-mat-intl-tel-input
+    [preferredCountries]="['us', 'gb']"
+    [enablePlaceholder]="true"
+    [enableSearch]="true"
+    name="phone"
+    describedBy="phoneInput"
+    formControlName="phone"
+  ></ngx-mat-intl-tel-input>
+</form> -->

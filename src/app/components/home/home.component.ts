@@ -16,14 +16,15 @@ export class HomeComponent {
       Validators.pattern(/[A-Za-z0-9]/),
     ]),
     email: new FormControl('', [Validators.required, Validators.email]),
-    tel: new FormControl('', [
+    tel: new FormControl('',[
       Validators.required,
       Validators.maxLength(14),
       Validators.minLength(11),
     ]),
     salery: new FormControl('', [
       Validators.required,
-  
+      Validators.minLength(3),
+      Validators.maxLength(6),
     ]),
     address: new FormControl('', [
       Validators.required,
@@ -31,7 +32,7 @@ export class HomeComponent {
       Validators.minLength(5),
       Validators.pattern(/[A-Za-z0-9]/),
     ]),
-    department: new FormControl('', Validators.required),
+    position: new FormControl('', Validators.required),
     date: new FormControl('', Validators.required),
   });
 
