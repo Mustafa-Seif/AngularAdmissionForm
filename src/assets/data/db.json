@@ -65,5 +65,28 @@
     "lable": "Experience",
     "select": ["Less than a year", "From 1-3 Years", "Years or above"],
     "error":[]
+  },
+  {
+    "name": "anyButton",
+    "type": "text",
+    "lable": "any button",
+    "select": [],
+    "error":[]
+
+  },
+  {
+    "name": "anyButton2",
+    "type": "text",
+    "lable": "any button2",
+    "select": [],
+    "error":[]
+
+  },
+  {
+    "name": "upload",
+    "type": "button",
+    "lable": "Upload file",
+    "select": [],
+    "error":[]
   }
 ]

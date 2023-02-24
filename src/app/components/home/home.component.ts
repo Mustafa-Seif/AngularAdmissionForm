@@ -48,6 +48,8 @@ export class HomeComponent {
     birthDate: new FormControl('', Validators.required),
     availableDate: new FormControl('', Validators.required),
     experience: new FormControl('', Validators.required),
+    anyButton: new FormControl('', Validators.required),
+    anyButton2: new FormControl('', Validators.required),
 
   });
 
