@@ -1,6 +1,8 @@
 <main class="mt-5">
   <div class="custom-container">
-    <div class="row home-wrapper justify-content-between align-items-center gx-1">
+    <div
+      class="row home-wrapper justify-content-between align-items-center gx-1"
+    >
       <div class="col-md-5 col-12 img-home">
         <figure>
           <img src="../../../assets/images/Logo-onBlack.png" alt="logo" />
@@ -14,143 +16,114 @@
           />
         </h1>
       </div>
-      <form
-        [formGroup]="admissionForm"
-        (ngSubmit)="handleSubmit()"
-        class="col-md-6 col-12"
-      >
-      <fieldset>
-        <legend>Admission Form</legend>
-        <div class="row">
-        <mat-form-field class="col-md-6 col-12">
-          <mat-label>Name</mat-label>
-          <input matInput name="name" type="text" formControlName="name" />
-          <mat-error *ngIf="admissionForm.controls['name'].hasError('required')">
-            Name is required
-          </mat-error>
-          <mat-error *ngIf="admissionForm.controls['name'].hasError('maxlength')">
-            Max length is 35
-          </mat-error>
-          <mat-error *ngIf="admissionForm.controls['name'].hasError('minlength')">
-            Min length is 5
-          </mat-error>
-          <mat-error *ngIf="admissionForm.controls['name'].hasError('pattern')">
-            Empty string
-          </mat-error>
-        </mat-form-field>
-        <mat-form-field appearance="fill" class="col-md-6 col-12">
-          <mat-label>Email</mat-label>
-          <input matInput name="email" type="email" formControlName="email" />
-          <mat-error *ngIf="admissionForm.controls['email'].hasError('required')">
-            E-mail is required
-          </mat-error>
-          <mat-error *ngIf="admissionForm.controls['email'].hasError('email')">
-            Enter a valid e-mail
-          </mat-error>
-        </mat-form-field>
-        <mat-form-field appearance="fill" class="col-md-6 col-12">
-          <mat-label>Phone</mat-label>
-          <input matInput name="tel" type="tel" formControlName="tel" />
-          <mat-error *ngIf="admissionForm.controls['tel'].hasError('required')">
-            Phone is required
-          </mat-error>
-          <mat-error *ngIf="admissionForm.controls['tel'].hasError('maxlength')">
-            Max length is 14
-          </mat-error>
-          <mat-error *ngIf="admissionForm.controls['tel'].hasError('minlength')">
-            Min length is 11
-          </mat-error>
-        </mat-form-field>
-        <mat-form-field class="col-md-6 col-12">
-          <mat-label>Address</mat-label>
-          <input matInput name="address" type="text" formControlName="address" />
-          <mat-error *ngIf="admissionForm.controls['address'].hasError('required')">
-            Name is required
-          </mat-error>
-          <mat-error *ngIf="admissionForm.controls['address'].hasError('maxlength')">
-            Max length is 35
-          </mat-error>
-          <mat-error *ngIf="admissionForm.controls['address'].hasError('minlength')">
-            Min length is 5
-          </mat-error>
-          <mat-error *ngIf="admissionForm.controls['address'].hasError('pattern')">
-            Empty string
-          </mat-error>
-        </mat-form-field>
-        <mat-form-field appearance="fill" class="col-md-6 col-12">
-          <mat-label>Position</mat-label>
-          <mat-select formControlName="position">
-            <mat-option value="one">Front End</mat-option>
-            <mat-option value="two">Back End</mat-option>
-            <mat-option value="two">Full Stack</mat-option>
-          </mat-select>
-          <mat-error *ngIf="admissionForm.controls['position'].hasError('required')">
-            Department is required
-          </mat-error>
-        </mat-form-field>
-        <mat-form-field appearance="fill" class="col-md-6 col-12">
-          <mat-label>$ Expected Salery</mat-label>
-          <input matInput name="salery" type="number" formControlName="salery" />
-          <mat-error *ngIf="admissionForm.controls['salery'].hasError('required')">
-            Salery is required
-          </mat-error>
-          <mat-error *ngIf="admissionForm.controls['salery'].hasError('maxlength')">
-            Max number is 6
-          </mat-error>
-          <mat-error *ngIf="admissionForm.controls['salery'].hasError('minlength')">
-            Min number is 3
-          </mat-error>
-        </mat-form-field>
-        <mat-form-field appearance="fill" class="col-md-6 col-12">
-          <mat-label>Birth Date</mat-label>
-          <input matInput [matDatepicker]="picker" formControlName="date" />
-          <mat-error *ngIf="admissionForm.get('date')?.errors">date is required</mat-error>
-          <mat-datepicker-toggle
-            matIconSuffix
-            [for]="picker"
-          ></mat-datepicker-toggle>
-          <mat-datepicker #picker></mat-datepicker>
-        </mat-form-field>
-        <div class="file-input col-md-6 col-12">
-          <input
-            type="file"
-            name="file-input"
-            id="file-input"
-            class="file-input__input"
-          />
-          <label class="file-input__label" for="file-input">
-            <svg
-              aria-hidden="true"
-              focusable="false"
-              data-prefix="fas"
-              data-icon="upload"
-              class="svg-inline--fa fa-upload fa-w-16"
-              role="img"
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 512 512"
+      <div class="col-md-6 col-12">
+        <form [formGroup]="admissionForm" (ngSubmit)="handleSubmit()">
+          <fieldset>
+            <legend>Admission Form</legend>
+            <div
+              *ngFor="
+                let input of formData
+                  | paginate : { itemsPerPage: 3, currentPage: p }
+              "
             >
-              <path
-                fill="currentColor"
-                d="M296 384h-80c-13.3 0-24-10.7-24-24V192h-87.7c-17.8 0-26.7-21.5-14.1-34.1L242.3 5.7c7.5-7.5 19.8-7.5 27.3 0l152.2 152.2c12.6 12.6 3.7 34.1-14.1 34.1H320v168c0 13.3-10.7 24-24 24zm216-8v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h136v8c0 30.9 25.1 56 56 56h80c30.9 0 56-25.1 56-56v-8h136c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z"
-              ></path>
-            </svg>
-            <span>Upload CV</span></label
-          >
-        </div>
-        <div class="d-flex justify-content-between buttons">
-          <button color="primary" class="fill">Submit</button>
-          <button
-            class="fill"
-            color="warn"
-            (click)="handleClear()"
-            type="reset"
-          >
-            Clear
-          </button>
-        </div>
+              <mat-form-field
+                class="example-full-width w-100"
+                *ngIf="input.type == 'text' || input.type == 'number' || input.type == 'email' "
+              >
+                <mat-label>{{ input.lable }}</mat-label>
+                <input
+                  matInput
+                  [name]="input.name"
+                  [formControlName]="input.name"
+                  [type]="input.type"
+                />
+                <mat-error
+                *ngIf="admissionForm.controls[input.name].hasError('required')"
+              >
+                {{input.lable}} is required
+              </mat-error>
+                <mat-error
+                *ngIf="admissionForm.controls[input.name].hasError('maxlength')"
+              >
+                Max length is {{input.error.max}}
+              </mat-error>
+              <mat-error
+                *ngIf="admissionForm.controls[input.name].hasError('minlength')"
+              >
+                Min length is {{input.error.min}}
+              </mat-error>
+              <mat-error
+                *ngIf="admissionForm.controls[input.name].hasError('pattern')"
+              >
+                Empty string
+              </mat-error>
+              <mat-error
+                  *ngIf="admissionForm.controls[input.name].hasError('email')"
+                >
+                  Enter a valid e-mail
+                </mat-error>
+              </mat-form-field>
+              <mat-form-field
+                appearance="fill"
+                *ngIf="input.type == 'date'"
+                class="example-full-width w-100"
+              >
+                <mat-label>{{ input.lable }}</mat-label>
+                <input
+                  matInput
+                  [matDatepicker]="picker"
+                  [formControlName]="input.name"
+                />
+                <mat-datepicker-toggle
+                  matIconSuffix
+                  [for]="picker"
+                ></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+                <mat-error
+                *ngIf="admissionForm.controls[input.name].hasError('required')"
+              >
+                {{input.lable}} is required
+              </mat-error>
+              </mat-form-field>
+              <mat-form-field
+                appearance="fill"
+                class="w-100"
+                *ngIf="input.type == 'select'"
+              >
+                <mat-label>{{ input.lable }}</mat-label>
+                <mat-select [formControlName]="input.name">
+                  <mat-option [value]="sel" *ngFor="let sel of input.select">{{
+                    sel
+                  }}</mat-option>
+                </mat-select>
+                <mat-error
+                *ngIf="admissionForm.controls[input.name].hasError('required')"
+              >
+                {{input.lable}} is required
+              </mat-error>
+              </mat-form-field>
+            </div>
+            <pagination-controls
+            (pageChange)="p = $event"
+            screenReaderCurrentLabel="You're on page"
+            previousLabel ="Prev"
+            [responsive] ="true"
+            [maxSize]="9"
+          ></pagination-controls>
+            <div class="d-flex justify-content-between buttons">
+              <button color="primary" class="fill">Submit</button>
+              <button
+                class="fill"
+                color="warn"
+                (click)="handleClear()"
+                type="reset"
+              >
+                Clear
+              </button>
+            </div>
+          </fieldset>
+        </form>
       </div>
-        </fieldset>
-      </form>
     </div>
   </div>
 </main>

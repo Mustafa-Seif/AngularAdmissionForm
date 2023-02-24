@@ -12,7 +12,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { ServiceWorkerModule } from '@angular/service-worker';
-// import { NgxMatIntlTelInputModule  } from "ngx-mat-intl-tel-input";
+import {NgxPaginationModule} from 'ngx-pagination';
+import { HttpClientModule } from '@angular/common/http';
 // C O M P O N E N T S 
 import { HomeComponent } from './components/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -24,6 +25,7 @@ import { FooterComponent } from './components/footer/footer.component';
     FooterComponent,
   ],
   imports: [
+    NgxPaginationModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -34,7 +36,7 @@ import { FooterComponent } from './components/footer/footer.component';
     ReactiveFormsModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    // NgxMatIntlTelInputModule ,
+    HttpClientModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: !isDevMode(),
       // Register the ServiceWorker as soon as the application is stable

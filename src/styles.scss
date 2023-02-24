@@ -31,3 +31,22 @@ button {
 .swal2-confirm {
   background-color: #6b0f15 !important;
 }
+
+// pagination
+.ngx-pagination {
+  text-align: center !important;
+}
+.ngx-pagination .current {
+  padding: 0.1875rem 0.625rem;
+  background: #fff !important;
+  color: #000 !important;
+  cursor: default;
+}
+.pagination-previous,
+.pagination-next {
+  a {
+    text-decoration: none !important;
+  }
+  background-color: #c03434 !important;
+  border: solid 1px #fff !important;
+}
