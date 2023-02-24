@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1676958869840,
+  "timestamp": 1677229279912,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -13,11 +13,11 @@
       "urls": [
         "/favicon.ico",
         "/index.html",
-        "/main.afbe69151251682a.js",
+        "/main.74ede14fb4e4b079.js",
         "/manifest.webmanifest",
         "/polyfills.0f2e5cca4c14821b.js",
         "/runtime.3fcc0079132f1c03.js",
-        "/styles.b7536f214b022346.css"
+        "/styles.528aac8fd7779fd6.css"
       ],
       "patterns": []
     },
@@ -29,6 +29,7 @@
         "ignoreVary": true
       },
       "urls": [
+        "/assets/data/db.json",
         "/assets/icons/icon-128x128.png",
         "/assets/icons/icon-144x144.png",
         "/assets/icons/icon-152x152.png",
@@ -38,13 +39,17 @@
         "/assets/icons/icon-72x72.png",
         "/assets/icons/icon-96x96.png",
         "/assets/images/Hug-Me-02.png",
-        "/assets/images/Logo-onBlack.png"
+        "/assets/images/Logo-onBlack.png",
+        "/assets/images/bg-loader.webp",
+        "/assets/images/loader.svg",
+        "/bg-loader.a32130014952f4f0.webp"
       ],
       "patterns": []
     }
   ],
   "dataGroups": [],
   "hashTable": {
+    "/assets/data/db.json": "6fd69665f913bc21696e509fc6bd47430e930c12",
     "/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
     "/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
     "/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
@@ -55,13 +60,16 @@
     "/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
     "/assets/images/Hug-Me-02.png": "8f1bed92a4e4fe2771abeb04f7bbcff116f91a80",
     "/assets/images/Logo-onBlack.png": "3ede6140940ad8143c87c458fab04384c320cae4",
+    "/assets/images/bg-loader.webp": "6b1286245f71f392e83493e2dd97dd687ccb5b6e",
+    "/assets/images/loader.svg": "978fc1b2dd34df0c0385523a3d9ea8463664ee49",
+    "/bg-loader.a32130014952f4f0.webp": "6b1286245f71f392e83493e2dd97dd687ccb5b6e",
     "/favicon.ico": "94e985f5638e99aec8c756805336ad74033e21da",
-    "/index.html": "b95ea400368f68d873231e0a729bf2235e9cc467",
-    "/main.afbe69151251682a.js": "320da12825c3d0d566e8fcb2251df111980d1fa1",
-    "/manifest.webmanifest": "85a3ed833a553f6812e61ba820a59894e6467f31",
+    "/index.html": "18f38ed52742e8aa438b20201173d4def2ab6f6e",
+    "/main.74ede14fb4e4b079.js": "752273e1ec6b10ca0f73e078bfb1b458bcc628a7",
+    "/manifest.webmanifest": "2b2e1d44f4772bfe87662b41ec53a593deb216e0",
     "/polyfills.0f2e5cca4c14821b.js": "d810c9f12d4227c16410a0380bd604f9bfa3d585",
     "/runtime.3fcc0079132f1c03.js": "ebbbe8989cde7686e44273106944c8b15d4cc693",
-    "/styles.b7536f214b022346.css": "7a72a99a90e6192ac2befd6914b73632fb180704"
+    "/styles.528aac8fd7779fd6.css": "d71b72b99aa8a384d5e116ddd95351c77c7684d0"
   },
   "navigationUrls": [
     {

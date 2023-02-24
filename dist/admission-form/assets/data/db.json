@@ -1,0 +1,69 @@
+[
+  {
+    "name": "name",
+    "type": "text",
+    "lable": "name",
+    "select": [],
+    "error":[{"max":35},{"min":5}]
+
+  },
+  {
+    "name": "phone",
+    "type": "text",
+    "lable": "Phone",
+    "select": [],
+    "error":[{"max":15},{"min":11}]
+  },
+  {
+    "name": "email",
+    "type": "email",
+    "lable": "E-mail",
+    "select": [],
+    "error":[]
+
+  },
+  {
+    "name": "birthDate",
+    "type": "date",
+    "lable": "Birth date",
+    "select": [],
+    "error":[]
+
+  },
+  {
+    "name": "address",
+    "type": "text",
+    "lable": "Address",
+    "select": [],
+    "error":[]
+
+  },
+  {
+    "name": "position",
+    "type": "select",
+    "lable": "Position",
+    "select": ["Front end", "back end", "Full stack", "Sales", "hr"],
+    "error":[]
+  },
+  {
+    "name": "availableDate",
+    "type": "date",
+    "lable": "Available date",
+    "select": [],
+    "error":[]
+  },
+  {
+    "name": "salery",
+    "type": "number",
+    "lable": "Expected salary",
+    "select": [],
+    "error":[{"max":5},{"min":3}]
+  },
+  {
+    "name": "experience",
+    "type": "select",
+    "lable": "Experience",
+    "select": ["Less than a year", "From 1-3 Years", "Years or above"],
+    "error":[]
+  }
+]
